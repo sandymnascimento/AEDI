@@ -3,16 +3,17 @@
 
 void estatisticas(double *lista_numero, int qtd, double *menor, double *maior, double *media, double *soma){
         int i, k;
+        *menor = lista_numero[0];
+        *maior = lista_numero[0];
+        *media = 0;
+        *soma = 0;
 
         for(i = 0; i < qtd; i++){
-                for(k = 0; k < qtd; k++){
-                        if(lista_numero[i] < lista_numero[k] && lista_numero[i] < *menor)
-                                *menor = lista_numero[i];
-                        if(lista_numero[i] > lista_numero[k] && lista_numero[i] > *maior)
-                                *maior = lista_numero[i];
-                }
-        }
-        for(i = 0; i < qtd; i++){
+                if(lista_numero[i] < *menor)
+                    *menor = lista_numero[i];
+                if(lista_numero[i] > *maior)
+                    *maior = lista_numero[i];
+
                 *media = *media + abs(lista_numero[i]);
                 if(i == (qtd - 1))
                     *media = *media / qtd;
