@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <ctype.h>
 //#include "disciplinas_ordenadas.h"
 
 typedef struct Disciplina Disciplina;
@@ -9,7 +10,6 @@ struct Disciplina {
     Disciplina *requisito;
 };
 
-
 typedef struct Curso Curso;
 struct Curso {
     int cod_curso;
@@ -17,8 +17,9 @@ struct Curso {
     Disciplina *ultima_disciplina;
 };
 
-void insere_disciplina(Curso *curso, Disciplina *nova_disciplina) {
+void insere_disciplina(Curso *curso, Disciplina *nova_disciplina) { / recebe um curso e uma disciplina nova
 
+    if(curso)
+    curso->ultima_disciplina->requisitos
 }
-int main(){
-}
+

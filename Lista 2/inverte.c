@@ -10,20 +10,20 @@ char *inverte_texto(char *texto){
         i++;
     }
 
-    char inverte[cont + 1];
+    char *inverte = malloc(sizeof(char) * (cont + 1));
     a = cont - 1;
 
-    for(i = 0; i <= cont; i ++)
+    for(i = 0; i < cont; i ++)
     {
         inverte[i] = texto[a];
         a--;
-        if(i == cont)
-            inverte[a] = '\0';
+
     }
+        inverte[cont] = '\0';
     return inverte;
 }
 int main(){
-    char texto[] = "lobao";
-    inverte_texto(texto);
+    char texto[] = "sandy, limao";
+    puts(inverte_texto(texto));
     return 0;
 }
