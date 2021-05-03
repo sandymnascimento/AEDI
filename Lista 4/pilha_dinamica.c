@@ -1,5 +1,15 @@
 #include <stdlib.h>
-#include "pilha_dinamica.h"
+
+typedef struct Node Node;
+struct Node {
+   int data;
+   struct Node *next;
+};
+
+typedef struct Pilha Pilha;
+struct Pilha {
+   Node *topo;
+};
 
 Pilha *cria_pilha() {
 	Pilha *novo = malloc(sizeof(Pilha));

@@ -1,7 +1,16 @@
 #include <stdlib.h>
-#include "lista_espelhada.h"
-#include "pilha_dinamica.h"
-#include "fila_dinamica.h"
+//lista_espelhada, pilha_dinamica, fila_dinamica
+
+typedef struct Node Node;
+struct Node {
+    int data;
+    Node *next;
+};
+
+typedef struct Pilha Pilha;
+struct Pilha {
+   Node *topo;
+};
 
 int lista_espelhada(Node *lista) {
     Node *inicio = lista;

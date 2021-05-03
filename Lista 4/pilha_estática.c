@@ -1,5 +1,11 @@
 #include <stdlib.h>
-#include "pilha_estatica.h"
+
+typedef struct Pilha Pilha;
+struct Pilha {
+   int *vetor;
+   int topo;
+   int tamanho_vetor;
+};
 
 Pilha *cria_pilha(int tamanho_vetor) {
     Pilha *pilha = malloc(sizeof(Pilha));

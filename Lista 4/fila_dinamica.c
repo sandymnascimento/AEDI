@@ -1,5 +1,15 @@
 #include <stdlib.h>
-#include "fila_dinamica.h"
+
+typedef struct Node Node;
+struct Node {
+   int data;
+   struct Node *next;
+};
+
+typedef struct Fila Fila;
+struct Fila {
+   Node *primeiro, *ultimo;
+};
 
 Fila *cria_fila() {
     Fila *fila = malloc(sizeof(Fila));
